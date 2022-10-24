@@ -16,12 +16,14 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.kolistro.marvel.ui.theme.Grey100
+
 
 
 class MainActivity : ComponentActivity() {
@@ -40,8 +42,12 @@ fun Screen(){
         mutableStateOf(Grey100)
     }
     Column(horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier
-            .background(color.value)
+           modifier = Modifier
+            .background(Brush.linearGradient(colors = listOf(
+                Grey100,
+                Grey100,
+                color.value
+            )))
             .fillMaxSize()
     )
     {
@@ -58,7 +64,7 @@ fun Screen(){
         )
         LazyRow(modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(35.dp),
-                contentPadding = PaddingValues(horizontal = 25.dp, vertical = 40.dp)
+                contentPadding = PaddingValues(horizontal = 20.dp, vertical = 40.dp)
 
         ){
             itemsIndexed(
