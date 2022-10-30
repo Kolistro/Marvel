@@ -17,7 +17,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-
+/**
+ * Отвечает за внешний вид карточки героя
+ * @param item параметр класса ItemHero, отвечает за данные о герое (фото, имя, цвет)
+ *
+ */
 @Composable
 fun CardHero(item: ItemHero) {
     Box(
