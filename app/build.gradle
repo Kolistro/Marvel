@@ -82,13 +82,6 @@ detekt {
 
 
     input = files("app/src/main/java", "app/src/main/kotlin")
-
-    reports {
-        html {
-            enabled = true
-            destination = file("app/build/detekt/detekt.html")
-        }
-    }
 }
 tasks.detekt.jvmTarget = "1.8"
 
