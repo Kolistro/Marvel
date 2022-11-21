@@ -35,7 +35,7 @@ fun CardHero(navController: NavHostController, hero: Result?) {
                 modifier= Modifier.fillMaxWidth()
                     .clip(RoundedCornerShape(25.dp))
                     .clickable { navController.navigate(NavRoute.HeroScreen.route)},
-                model = hero.thumbnail.path + ".jpg",
+                model = hero.thumbnail.path + "." + hero.thumbnail.extension,
                 contentDescription = hero.name,
             )
         }

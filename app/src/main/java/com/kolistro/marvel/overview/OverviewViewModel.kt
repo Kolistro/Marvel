@@ -24,8 +24,6 @@ class OverviewViewModel: ViewModel() {
     var id: LiveData<String> = _id
 
 
-
-
     private fun getMarvelData(){
         viewModelScope.launch {
             _status.value=MarvelApiStatus.LOADING

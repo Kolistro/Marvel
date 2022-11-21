@@ -46,7 +46,7 @@ fun HeroScreen(hero: Result?, navController: NavHostController) {
                     modifier = Modifier
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(25.dp)),
-                    model = hero.thumbnail.path + hero.thumbnail.extension,
+                    model = hero.thumbnail.path + "." + hero.thumbnail.extension,
                     contentDescription = hero.name,
                 )
             }
